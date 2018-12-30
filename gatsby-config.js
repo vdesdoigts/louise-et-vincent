@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby Default Starter',
-    description: 'Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.',
-    author: '@gatsbyjs',
+    title: 'Louise et Vincent se marient',
+    description: 'Mariage le 22 Juin 2019',
+    author: '@vdesdoigts',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
