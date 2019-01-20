@@ -62,6 +62,7 @@ function SEO({ description, lang, meta, keywords, title }) {
               .concat(meta)}
           >
             <link href="https://fonts.googleapis.com/css?family=Quicksand:400,500,700" rel="stylesheet" />
+            <link href="https://fonts.googleapis.com/css?family=Gentium+Basic" rel="stylesheet" />
           </Helmet>
         )
       }}

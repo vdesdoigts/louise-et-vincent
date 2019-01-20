@@ -186,7 +186,6 @@ export const GlobalStyle = createGlobalStyle`
     font-size: 62.5%;
     font-size: calc(1em * .625);
     box-sizing: border-box;
-    overflow-y: scroll;
   }
   * {
     box-sizing: inherit;
@@ -198,6 +197,7 @@ export const GlobalStyle = createGlobalStyle`
     box-sizing: inherit;
   }
   body {
+    line-height: 1.5;
     color: hsla(0, 0%, 0%, 0.8);
     font-size: 1.6rem;
     font-weight: normal;
@@ -263,11 +263,9 @@ export const GlobalStyle = createGlobalStyle`
     padding-top: 0;
     margin-bottom: 1.45rem;
     color: inherit;
-    /* font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-      Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif; */
-    font-weight: bold;
+    font-weight: 400;
     text-rendering: optimizeLegibility;
-    font-size: 1.38316rem;
+    font-size: 2rem;
     line-height: 1.1;
   }
   h4 {
