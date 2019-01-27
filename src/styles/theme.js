@@ -15,5 +15,6 @@ export const spacers = {
 
 export const colors = {
   primary: '#BB8316',
+  primaryDark: '#AB7409',
   text: 'hsla(0, 0%, 0%, 0.8)'
 };

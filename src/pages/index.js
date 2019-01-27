@@ -22,6 +22,7 @@ import SleepAirbnbNeuhe from '../images/dormir-airbnb-neuhe.jpg'
 import SleepAirbnbLanguidic from '../images/dormir-languidic.jpg'
 import SleepAirbnbKeroman from '../images/dormir-airbnb-keroman.jpg'
 import PortraitImg from '../images/LouiseVincent-180.jpg'
+import GiftImg from '../images/gift.svg'
 
 import styled from 'styled-components'
 import { Box, Flex, Text } from 'rebass'
@@ -117,6 +118,13 @@ const Quote = styled(Text)`
   font-family: "Gentium Basic";
 `;
 
+const Link = styled(Text)`
+  color: ${colors.primary};
+  &:hover {
+    color: ${colors.primaryDark};
+  }
+`;
+
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" keywords={['Mariage', 'Louise Le Bolay', 'Vincent Desdoigts', '2019']} />
@@ -128,7 +136,7 @@ const IndexPage = () => (
           </LogoContainer>
           <Box pt="2rem">
             <Text as="h1">22 Juin 2019</Text>
-            <Text as="h2">Gâvres / Lambézégan</Text>
+            <Text as="h2">Gâvres / Lambezegan</Text>
           </Box>
         </Text>
       </Header>
@@ -210,7 +218,7 @@ const IndexPage = () => (
                 </Box>
                 <Box>
                   <Subtitle as="h3" color={colors.primary} pt="2rem">Vin d’honneur</Subtitle>
-                  <Text as="p">Après quelques photos à Gâvres nous prendrons la route direction Lambézégan pour trinquer ensemble et débuter cette très longue soirée !</Text>
+                  <Text as="p">Après quelques photos à Gâvres nous prendrons la route direction Lambezegan pour trinquer ensemble et débuter cette très longue soirée !</Text>
                   <Text as="p">Attention le vin d’honneur aura lieu dans l’herbe, les talons aiguilles ne seront pas vos meilleurs amis&nbsp;!</Text>
                 </Box>
               </Text>
@@ -246,15 +254,40 @@ const IndexPage = () => (
         <Grid>
           <Col width={[1/1, 1/1, 2/3]}>
             <Text pt={'4rem'} pl={['2rem', '2rem', '4rem']} pr={['2rem', '2rem', '2rem']} fontSize={['1.6rem', '1.8rem', '2rem']} textAlign="left">
+              <Title as="h2" color={colors.primary}>Liste de mariage</Title>
+              <Text>Comme nous ne faisons rien comme tout le monde notre voyages de noces aura lieu avant le mariage !<br/>
+              Nous partons faire un tour en Asie dès février. Voici quelques idées de cadeaux qui font autant rêver !</Text>
+              <Box mt="2rem">
+                <Link as="a" href="http://www.millemercismariage.com/onsemariepourdevrai/liste.html">
+                  <Flex as="span" alignItems="center">
+                    <Box pr="2rem">
+                      <img width="50rem" height="30rem" src={GiftImg} style={{ marginBottom: 0 }} />
+                    </Box>
+                    <Box as="span" pb="1rem">Voir la cagnotte</Box>
+                  </Flex>
+                </Link>
+              </Box>
+            </Text>
+          </Col>
+        </Grid>
+      </Content>
+    </Box>
+
+    <Box id="infos" pt="2rem">
+      <Content pb="2rem">
+        <Grid>
+          <Col width={[1/1, 1/1, 2/3]}>
+            <Text pt={'4rem'} pl={['2rem', '2rem', '4rem']} pr={['2rem', '2rem', '2rem']} fontSize={['1.6rem', '1.8rem', '2rem']} textAlign="left">
               <Title as="h2" color={colors.primary}>Comment venir&nbsp;?</Title>
-              <Text as="p">Attention la voiture est indispensable pour se rendre à Gâvres et à Lambézégan. N’hésitez pas à faire du covoiturage pour mutualiser les voitures.</Text>
+              <Text as="p">Attention la voiture est indispensable pour se rendre à Gâvres et à Lambezegan. N’hésitez pas à faire du covoiturage pour mutualiser les voitures.</Text>
             </Text>
           </Col>
         </Grid>
         <Grid>
           <Col width={[1/1, 1/1, 1/2]} pb="3rem">
             <Text pt={'4rem'} pl={['2rem', '2rem', '4rem']} pr={['2rem', '2rem', '2rem']} fontSize={['1.6rem', '1.8rem', '2rem']} textAlign="left">
-              <Text as="p"><Text as="span" fontWeight="500">Adresse de l’Eglise :</Text> Rue de Porh Guerh, 56680 Gâvres (lien google map)</Text>
+              <Text as="p"><Text as="span" fontWeight="500">Adresse de l’Eglise :</Text> Rue de Porh Guerh, 56680 Gâvres - <Link as="a" href="maps">Voir sur Maps</Link></Text>
+              
               <Text as="p">Trois parking à proximité&nbsp;:</Text>
               <ul>
                 <li>1/ Places de stationnement vers le 21 Rue de Porh Puns</li>
@@ -266,7 +299,7 @@ const IndexPage = () => (
           </Col>
           <Col width={[1/1, 1/1, 1/2]} pb="3rem">
             <Text pt={'4rem'} pl={['2rem', '2rem', '4rem']} pr={['2rem', '2rem', '2rem']} fontSize={['1.6rem', '1.8rem', '2rem']} textAlign="left">
-              <Text as="p"><Text as="span" fontWeight="500">Adresse du vin d’honneur et dîner&nbsp;:</Text> Lambézégan 56440 Languidic (lien google map)</Text>
+              <Text as="p"><Text as="span" fontWeight="500">Adresse du vin d’honneur et dîner&nbsp;:</Text> Lambezegan 56440 Languidic - <Link as="a" href="maps">Voir sur Maps</Link></Text>
               <Text as="p">Des places de stationnement seront indiquées<br/>
               Les gares les plus proches&nbsp;: Auray ou Vannes<br/>
               Les aéroports les plus proches&nbsp;: Lorient, Rennes ou Nantes</Text>
@@ -299,7 +332,7 @@ const IndexPage = () => (
               <img src={SleepCamping} />
               <Text as="p" fontWeight="500">Camping de Pont Augan</Text>
               <Text as="p">3 euros la nuit par campeur à 2 minutes de voiture</Text>
-              <Text as="a" color={colors.primary} href="http://www.camping-pontaugan.com/disponibilites/" target="_blank">Réserver</Text>
+              <Link as="a" color={colors.primary} href="http://www.camping-pontaugan.com/disponibilites/" target="_blank">Réserver</Link>
             </Text>
           </Col>
           <Col width={[1/1, 1/2, 1/3]} pb="3rem">
@@ -307,7 +340,7 @@ const IndexPage = () => (
               <img src={SleepAirbnb} />
               <Text as="p" fontWeight="500">Chambre dans une maison Airbnb</Text>
               <Text as="p">30 euros la nuit pour 2 personnes à 8 minutes en voiture</Text>
-              <Text as="a" color={colors.primary} href="https://www.airbnb.fr/rooms/20883179?adults=2&check_in=2019-06-21&check_out=2019-06-23&guests=1&s=hPV9obUx" target="_blank">Réserver</Text>
+              <Link as="a" color={colors.primary} href="https://www.airbnb.fr/rooms/20883179?adults=2&check_in=2019-06-21&check_out=2019-06-23&guests=1&s=hPV9obUx" target="_blank">Réserver</Link>
             </Text>
           </Col>
           <Col width={[1/1, 1/2, 1/3]} pb="3rem">
@@ -315,7 +348,7 @@ const IndexPage = () => (
               <img src={SleepIbis} />
               <Text as="p" fontWeight="500">Chambre d’hôtel ibis budget Lorient Hennebont</Text>
               <Text as="p">44 euros la nuit pour 2 personnes à 15 minutes de voiture</Text>
-              <Text as="a" color={colors.primary} href="https://bit.ly/2At9Jb5" target="_blank">Réserver</Text>
+              <Link as="a" color={colors.primary} href="https://bit.ly/2At9Jb5" target="_blank">Réserver</Link>
             </Text>
           </Col>
           <Col width={[1/1, 1/2, 1/3]} pb="3rem">
@@ -323,7 +356,7 @@ const IndexPage = () => (
               <img src={dormirKerverh} />
               <Text as="p" fontWeight="500">Chambre d’hôtes Kerverh</Text>
               <Text as="p">63 euros la nuit pour 2 personnes à 20 minutes de voiture</Text>
-              <Text as="a" color={colors.primary} href="https://www.booking.com/hotel/fr/kerverh.fr.html?aid=301664;label=languidic-8m*r36kpRLPjw*RFI*f8aQS154566395262:pl:ta:p12:p2:ac:ap1t1:neg:fi:tiaud-285284111406:kwd-13070087121:lp9055289:li:dec:dm;sid=82eb97c5584eeb434ec0a30047555018;all_sr_blocks=360924001_118683635_0_1_0;checkin=2019-06-22;checkout=2019-06-23;dest_id=-1437183;dest_type=city;dist=0;group_adults=2;hapos=6;highlighted_blocks=360924001_118683635_0_1_0;hpos=6;room1=A,A;sb_price_type=total;spdest=ci/-1437183;sr_order=popularity;srepoch=1546442893;srpvid=67fb6cc6e4fe0040;type=total;ucfs=1&#hotelTmpl" target="_blank">Réserver</Text>
+              <Link as="a" color={colors.primary} href="https://www.booking.com/hotel/fr/kerverh.fr.html?aid=301664;label=languidic-8m*r36kpRLPjw*RFI*f8aQS154566395262:pl:ta:p12:p2:ac:ap1t1:neg:fi:tiaud-285284111406:kwd-13070087121:lp9055289:li:dec:dm;sid=82eb97c5584eeb434ec0a30047555018;all_sr_blocks=360924001_118683635_0_1_0;checkin=2019-06-22;checkout=2019-06-23;dest_id=-1437183;dest_type=city;dist=0;group_adults=2;hapos=6;highlighted_blocks=360924001_118683635_0_1_0;hpos=6;room1=A,A;sb_price_type=total;spdest=ci/-1437183;sr_order=popularity;srepoch=1546442893;srpvid=67fb6cc6e4fe0040;type=total;ucfs=1&#hotelTmpl" target="_blank">Réserver</Link>
             </Text>
           </Col>
           <Col width={[1/1, 1/2, 1/3]} pb="3rem">
@@ -331,7 +364,7 @@ const IndexPage = () => (
               <img src={dormirLanouan} />
               <Text as="p" fontWeight="500">Château de Lannouan</Text>
               <Text as="p">166 euros la nuit chambre deluxe pour 2 personnes à 20 minutes de voiture</Text>
-              <Text as="a" color={colors.primary} href="https://www.booking.com/hotel/fr/chateau-de-lannouan.fr.html?aid=301664;label=languidic-8m*r36kpRLPjw*RFI*f8aQS154566395262:pl:ta:p12:p2:ac:ap1t1:neg:fi:tiaud-285284111406:kwd-13070087121:lp9055289:li:dec:dm;sid=82eb97c5584eeb434ec0a30047555018;all_sr_blocks=445804904_133887253_2_1_0;checkin=2019-06-22;checkout=2019-06-23;dest_id=-1437183;dest_type=city;dist=0;group_adults=2;hapos=10;highlighted_blocks=445804904_133887253_2_1_0;hpos=10;room1=A,A;sb_price_type=total;spdest=ci/-1437183;sr_order=popularity;srepoch=1546442893;srpvid=67fb6cc6e4fe0040;type=total;ucfs=1&#hotelTmpl" target="_blank">Réserver</Text>
+              <Link as="a" color={colors.primary} href="https://www.booking.com/hotel/fr/chateau-de-lannouan.fr.html?aid=301664;label=languidic-8m*r36kpRLPjw*RFI*f8aQS154566395262:pl:ta:p12:p2:ac:ap1t1:neg:fi:tiaud-285284111406:kwd-13070087121:lp9055289:li:dec:dm;sid=82eb97c5584eeb434ec0a30047555018;all_sr_blocks=445804904_133887253_2_1_0;checkin=2019-06-22;checkout=2019-06-23;dest_id=-1437183;dest_type=city;dist=0;group_adults=2;hapos=10;highlighted_blocks=445804904_133887253_2_1_0;hpos=10;room1=A,A;sb_price_type=total;spdest=ci/-1437183;sr_order=popularity;srepoch=1546442893;srpvid=67fb6cc6e4fe0040;type=total;ucfs=1&#hotelTmpl" target="_blank">Réserver</Link>
             </Text>
           </Col>
           <Col width={[1/1, 1/2, 1/3]} pb="3rem">
@@ -339,7 +372,7 @@ const IndexPage = () => (
               <img src={SleepAirbnbBis} />
               <Text as="p" fontWeight="500">Maison en pierre Airbnb</Text>
               <Text as="p">50 euros la nuit pour 4 personnes (2 chambres) à 10 minutes en voiture</Text>
-              <Text as="a" color={colors.primary} href="https://www.airbnb.fr/rooms/2840558?location=Lamb%C3%A9z%C3%A9gan%2C%20Languidic%2C%20France&adults=4&check_in=2019-06-21&check_out=2019-06-23&guests=1&s=vj4vRsqD" target="_blank">Réserver</Text>
+              <Link as="a" color={colors.primary} href="https://www.airbnb.fr/rooms/2840558?location=Lamb%C3%A9z%C3%A9gan%2C%20Languidic%2C%20France&adults=4&check_in=2019-06-21&check_out=2019-06-23&guests=1&s=vj4vRsqD" target="_blank">Réserver</Link>
             </Text>
           </Col>
           <Col width={[1/1, 1/2, 1/3]} pb="3rem">
@@ -347,7 +380,7 @@ const IndexPage = () => (
               <img src={SleepAirbnbVilla} />
               <Text as="p" fontWeight="500">Appartement dans villa contemporaine Airbnb</Text>
               <Text as="p">50 euros la nuit pour 4 personnes (2 chambres) à 20 minutes de voiture</Text>
-              <Text as="a" color={colors.primary} href="https://www.airbnb.fr/rooms/6054725?location=Lamb%C3%A9z%C3%A9gan%2C%20Languidic%2C%20France&adults=4&check_in=2019-06-21&check_out=2019-06-23&guests=1&s=XHJPgHF6" target="_blank">Réserver</Text>
+              <Link as="a" color={colors.primary} href="https://www.airbnb.fr/rooms/6054725?location=Lamb%C3%A9z%C3%A9gan%2C%20Languidic%2C%20France&adults=4&check_in=2019-06-21&check_out=2019-06-23&guests=1&s=XHJPgHF6" target="_blank">Réserver</Link>
             </Text>
           </Col>
           <Col width={[1/1, 1/2, 1/3]} pb="3rem">
@@ -355,7 +388,7 @@ const IndexPage = () => (
               <img src={SleepAirbnbKervignac} />
               <Text as="p" fontWeight="500">Maison Kervignac airbnb </Text>
               <Text as="p">65 euros la nuit pour 6/8 personnes (3 chambres) à 15 minutes de voiture</Text>
-              <Text as="a" color={colors.primary} href="https://www.airbnb.fr/rooms/15003888?location=Lamb%C3%A9z%C3%A9gan%2C%20Languidic%2C%20France&adults=4&check_in=2019-06-21&check_out=2019-06-23&guests=1&s=GcCoyicE" target="_blank">Réserver</Text>
+              <Link as="a" color={colors.primary} href="https://www.airbnb.fr/rooms/15003888?location=Lamb%C3%A9z%C3%A9gan%2C%20Languidic%2C%20France&adults=4&check_in=2019-06-21&check_out=2019-06-23&guests=1&s=GcCoyicE" target="_blank">Réserver</Link>
             </Text>
           </Col>
           <Col width={[1/1, 1/2, 1/3]} pb="3rem">
@@ -363,7 +396,7 @@ const IndexPage = () => (
               <img src={SleepAirbnbNeuhe} />
               <Text as="p" fontWeight="500">Gite TY NEUHE Airbnb</Text>
               <Text as="p">140 euros la nuit pour 8 personnes (4 chambres) à 10 minutes en voiture</Text>
-              <Text as="a" color={colors.primary} href="https://www.airbnb.fr/rooms/19332131?location=Lamb%C3%A9z%C3%A9gan%2C%20Languidic%2C%20France&adults=4&check_in=2019-06-21&check_out=2019-06-23&guests=1&s=MEbr9Pdj" target="_blank">Réserver</Text>
+              <Link as="a" color={colors.primary} href="https://www.airbnb.fr/rooms/19332131?location=Lamb%C3%A9z%C3%A9gan%2C%20Languidic%2C%20France&adults=4&check_in=2019-06-21&check_out=2019-06-23&guests=1&s=MEbr9Pdj" target="_blank">Réserver</Link>
             </Text>
           </Col>
           <Col width={[1/1, 1/2, 1/3]} pb="3rem">
@@ -371,7 +404,7 @@ const IndexPage = () => (
               <img src={SleepAirbnbLanguidic} />
               <Text as="p" fontWeight="500">Gîte de la Longère</Text>
               <Text as="p">450 euros la nuit pour 10 personnes à 10 minutes de voiture</Text>
-              <Text as="a" color={colors.primary} href="https://www.booking.com/hotel/fr/gite-de-la-longere-languidic.fr.html?aid=301664;label=languidic-8m*r36kpRLPjw*RFI*f8aQS154566395262:pl:ta:p12:p2:ac:ap1t1:neg:fi:tiaud-285284111406:kwd-13070087121:lp9055289:li:dec:dm;sid=82eb97c5584eeb434ec0a30047555018;all_sr_blocks=308847101_129128063_10_0_0;checkin=2019-06-22;checkout=2019-06-23;dest_id=-1437183;dest_type=city;dist=0;group_adults=2;hapos=2;highlighted_blocks=308847101_129128063_10_0_0;hpos=2;room1=A,A;sb_price_type=total;spdest=ci/-1437183;sr_order=popularity;srepoch=1546442893;srpvid=67fb6cc6e4fe0040;type=total;ucfs=1&#hotelTmpl" target="_blank">Réserver</Text>
+              <Link as="a" color={colors.primary} href="https://www.booking.com/hotel/fr/gite-de-la-longere-languidic.fr.html?aid=301664;label=languidic-8m*r36kpRLPjw*RFI*f8aQS154566395262:pl:ta:p12:p2:ac:ap1t1:neg:fi:tiaud-285284111406:kwd-13070087121:lp9055289:li:dec:dm;sid=82eb97c5584eeb434ec0a30047555018;all_sr_blocks=308847101_129128063_10_0_0;checkin=2019-06-22;checkout=2019-06-23;dest_id=-1437183;dest_type=city;dist=0;group_adults=2;hapos=2;highlighted_blocks=308847101_129128063_10_0_0;hpos=2;room1=A,A;sb_price_type=total;spdest=ci/-1437183;sr_order=popularity;srepoch=1546442893;srpvid=67fb6cc6e4fe0040;type=total;ucfs=1&#hotelTmpl" target="_blank">Réserver</Link>
             </Text>
           </Col>
           <Col width={[1/1, 1/2, 1/3]} pb="3rem">
@@ -379,22 +412,22 @@ const IndexPage = () => (
               <img src={SleepAirbnbKeroman} />
               <Text as="p" fontWeight="500">Longère de Keroman Airbnb</Text>
               <Text as="p">330 euros la nuit pour 10 voyageurs à 10 minutes en voiture</Text>
-              <Text as="a" color={colors.primary} href="https://www.airbnb.fr/rooms/23088292?adults=2&check_in=2019-06-21&check_out=2019-06-23&guests=1&s=ucod8Bar" target="_blank">Réserver</Text>
+              <Link as="a" color={colors.primary} href="https://www.airbnb.fr/rooms/23088292?adults=2&check_in=2019-06-21&check_out=2019-06-23&guests=1&s=ucod8Bar" target="_blank">Réserver</Link>
             </Text>
           </Col>
         </Grid>
       </Content>
     </Box>
 
-    <Box id="infos" pt="2rem">
+    <Box pt="4rem">
       <Content pb="2rem" pl={['2rem', '2rem', '4rem']} pr={['2rem', '2rem', '2rem']}>
         <Grid>
           <Col width={[1/1, 1/2, 3/5]} pb="3rem">
-            <Text pt={'4rem'} fontSize={['1.6rem', '1.8rem', '2rem']} textAlign="left">
+            <Text pt={'2rem'} fontSize={['1.6rem', '1.8rem', '2rem']} textAlign="left">
               <Title as="h2" color={colors.primary}>Nous contacter</Title>
-              <Text as="p">onsemariepourdevrai@gmail.com</Text>
-              <Text as="p">N’oubliez pas de renvoyer votre confirmation de présence par courrier à :<br/>
-              76 Avenue de Rigny, 94360 Bry-sur-Marne</Text>
+              <Text as="p"><b>onsemariepourdevrai@gmail.com</b></Text>
+              <Text as="p">N’oubliez pas de renvoyer votre<br/> confirmation de présence par courrier à :</Text>
+              <Text as="p"><b>76 Avenue de Rigny, 94360 Bry-sur-Marne</b></Text>
             </Text>
           </Col>
           <Col width={[1/1, 1/2, 2/5]} pb="3rem">
