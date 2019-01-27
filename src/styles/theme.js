@@ -1,5 +1,6 @@
 // breakpoints
 export const breakpoints = {
+  smPlus: '51.9375em',
   md: '52em',
   lg: '60em',
 };

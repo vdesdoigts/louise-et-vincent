@@ -165,26 +165,6 @@ const IndexPage = () => (
       </PresentationInner>
     </Presentation>
 
-    {/* <Oblique>
-      <Content>
-        <Grid>
-          <Col width={[1/1, 1/1, 1/2]}>
-            <Text width={1/1} pl={['2rem', '2rem', '4rem']} pr={['2rem', '2rem', '2rem']} py={['5rem', '5rem', '6rem']} fontSize={['1.6rem', '1.6rem', '2rem']} textAlign={['center', 'center', 'left']}>
-              <Text as="h2" pb="1rem" mb="0" fontSize={['1.8rem', '1.8rem', '2.4rem']}>Le 22 juin 2019 arrive à grands pas&nbsp;!</Text>
-              <Text as="p">Nous avons hâte de faire de ce weekend un moment<br/> inoubliable entouré de nos familles et amis.</Text>
-              <Text as="p">Pour cela il est important que vous trouviez<br/> tous le chemin ainsi que le programme.</Text>
-            </Text>
-          </Col>
-          <Col width={[1/1, 1/1, 1/2]} justifyContent="center">
-            <Flex pb="1rem" alignItems="center" justifyContent="center" px={['2rem', '2rem', '2rem']} pb={['5rem', '5rem', 0]}>
-              <Text as="h3" mb="0" color={colors.primary} fontFamily="Gentium Basic" fontSize={['2.2rem', '2.2rem', '3rem']} textAlign="center">“ Sous le soleil ou sous la pluie,<MediaQuery minWidth={breakpoints.lg}><br/></MediaQuery> nous avons prévu de nous dire oui&nbsp;! ”</Text>
-            </Flex>
-          </Col>
-        </Grid>
-      </Content>
-    </Oblique> */}
-    {/* <FullImg /> */}
-
     <Box id="programme" pt="6rem">
       <Content pb="2rem" px={['2rem', '2rem', '4rem']}>
         <Grid>
@@ -196,12 +176,14 @@ const IndexPage = () => (
                 <Text as="p">Nous vous donnons rendez vous à partir de 17h sur la plage du Lines à Gâvres pour le début des festivités, car oui il fera beau&nbsp;!</Text>
                 <a href="https://www.google.com/maps/place/Plage+De+Lines/@47.6849948,-3.2861637,16.25z/data=!4m8!1m2!2m1!1splage+gavres!3m4!1s0x4810670452513d65:0x852dfe7d02462220!8m2!3d47.6839426!4d-3.2835469"></a>
               </Text>
-              <Text pt={'4rem'} fontSize={['1.6rem', '1.6rem', '2rem']} textAlign="left">
-                <SundayImage />
-                <Subtitle as="h3" color={colors.primary} pt="2rem">Brunch et pétanque</Subtitle>
-                <Text as="p">Après une bonne, mais courte, nuit de sommeil nous vous invitons à venir bruncher avec nous et profiter de ce beau dimanche tous ensemble.</Text>
-                <a href="https://www.google.com/maps/place/Plage+De+Lines/@47.6849948,-3.2861637,16.25z/data=!4m8!1m2!2m1!1splage+gavres!3m4!1s0x4810670452513d65:0x852dfe7d02462220!8m2!3d47.6839426!4d-3.2835469"></a>
-              </Text>
+              <MediaQuery minWidth={breakpoints.md}>
+                <Text pt={'4rem'} fontSize={['1.6rem', '1.6rem', '2rem']} textAlign="left">
+                  <SundayImage />
+                  <Subtitle as="h3" color={colors.primary} pt="2rem">Brunch et pétanque</Subtitle>
+                  <Text as="p">Après une bonne, mais courte, nuit de sommeil nous vous invitons à venir bruncher avec nous et profiter de ce beau dimanche tous ensemble.</Text>
+                  <a href="https://www.google.com/maps/place/Plage+De+Lines/@47.6849948,-3.2861637,16.25z/data=!4m8!1m2!2m1!1splage+gavres!3m4!1s0x4810670452513d65:0x852dfe7d02462220!8m2!3d47.6839426!4d-3.2835469"></a>
+                </Text>
+              </MediaQuery>
             </MinContent>
           </Col>
           <Col width={[1/1, 1/1, 1/2]} pb="5rem">
@@ -222,6 +204,14 @@ const IndexPage = () => (
                   <Text as="p">Attention le vin d’honneur aura lieu dans l’herbe, les talons aiguilles ne seront pas vos meilleurs amis&nbsp;!</Text>
                 </Box>
               </Text>
+              <MediaQuery maxWidth={breakpoints.smPlus}>
+                <Text pt={'4rem'} fontSize={['1.6rem', '1.6rem', '2rem']} textAlign="left">
+                  <SundayImage />
+                  <Subtitle as="h3" color={colors.primary} pt="2rem">Brunch et pétanque</Subtitle>
+                  <Text as="p">Après une bonne, mais courte, nuit de sommeil nous vous invitons à venir bruncher avec nous et profiter de ce beau dimanche tous ensemble.</Text>
+                  <a href="https://www.google.com/maps/place/Plage+De+Lines/@47.6849948,-3.2861637,16.25z/data=!4m8!1m2!2m1!1splage+gavres!3m4!1s0x4810670452513d65:0x852dfe7d02462220!8m2!3d47.6839426!4d-3.2835469"></a>
+                </Text>
+              </MediaQuery>
             </MinContent>
           </Col>
         </Grid>
@@ -294,7 +284,7 @@ const IndexPage = () => (
                 <li>2/ Parking devant le cimetière 27-33 Rue de la Grande Plage</li>
                 <li>3/ Parking de Porh Guerh à gauche du 7 Rue des Anseaux</li>
               </ul>
-              <Text as="p">Merci de laisser les places de stationnements devant l’Eglise pour les personnes à mobilité réduites.</Text>
+              <Text as="p">Merci de laisser les places de stationnement devant l’Eglise pour les personnes à mobilité réduite.</Text>
             </Text>
           </Col>
           <Col width={[1/1, 1/1, 1/2]} pb="3rem">
