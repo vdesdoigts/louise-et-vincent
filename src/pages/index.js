@@ -255,7 +255,7 @@ const IndexPage = () => (
           <Col width={[1/1, 1/1, 2/3]}>
             <Text pt={'4rem'} pl={['2rem', '2rem', '4rem']} pr={['2rem', '2rem', '2rem']} fontSize={['1.6rem', '1.8rem', '2rem']} textAlign="left">
               <Title as="h2" color={colors.primary}>Liste de mariage</Title>
-              <Text>Comme nous ne faisons rien comme tout le monde notre voyages de noces aura lieu avant le mariage !<br/>
+              <Text>Comme nous ne faisons rien comme tout le monde, notre voyage de noces aura lieu avant le mariage !<br/>
               Nous partons faire un tour en Asie dès février. Voici quelques idées de cadeaux qui font autant rêver !</Text>
               <Box mt="2rem">
                 <Link as="a" href="http://www.millemercismariage.com/onsemariepourdevrai/liste.html">
@@ -286,7 +286,7 @@ const IndexPage = () => (
         <Grid>
           <Col width={[1/1, 1/1, 1/2]} pb="3rem">
             <Text pt={'4rem'} pl={['2rem', '2rem', '4rem']} pr={['2rem', '2rem', '2rem']} fontSize={['1.6rem', '1.8rem', '2rem']} textAlign="left">
-              <Text as="p"><Text as="span" fontWeight="500">Adresse de l’Eglise :</Text> Rue de Porh Guerh, 56680 Gâvres - <Link as="a" href="maps">Voir sur Maps</Link></Text>
+              <Text as="p"><Text as="span" fontWeight="500">Adresse de l’Eglise :</Text> Rue de Porh Guerh, 56680 Gâvres - <Link as="a" target="_blank" href="https://www.google.com/maps/place/Rue+de+Porh+Guerh,+56680+G%C3%A2vres/data=!4m2!3m1!1s0x481060f217bdf469:0xa43fb5ff4c572894?ved=2ahUKEwi6xsnBsI7gAhWE5-AKHQRFA8gQ8gEwAHoECAEQAQ">Voir sur Maps</Link></Text>
               
               <Text as="p">Trois parking à proximité&nbsp;:</Text>
               <ul>
@@ -299,7 +299,7 @@ const IndexPage = () => (
           </Col>
           <Col width={[1/1, 1/1, 1/2]} pb="3rem">
             <Text pt={'4rem'} pl={['2rem', '2rem', '4rem']} pr={['2rem', '2rem', '2rem']} fontSize={['1.6rem', '1.8rem', '2rem']} textAlign="left">
-              <Text as="p"><Text as="span" fontWeight="500">Adresse du vin d’honneur et dîner&nbsp;:</Text> Lambezegan 56440 Languidic - <Link as="a" href="maps">Voir sur Maps</Link></Text>
+              <Text as="p"><Text as="span" fontWeight="500">Adresse du vin d’honneur et dîner&nbsp;:</Text> Lambezegan 56440 Languidic - <Link as="a" target="_blank" href="https://www.google.com/maps/search/Lambezegan+56440+Languidic/@47.8724292,-3.1185558,15z/data=!3m1!4b1">Voir sur Maps</Link></Text>
               <Text as="p">Des places de stationnement seront indiquées<br/>
               Les gares les plus proches&nbsp;: Auray ou Vannes<br/>
               Les aéroports les plus proches&nbsp;: Lorient, Rennes ou Nantes</Text>
