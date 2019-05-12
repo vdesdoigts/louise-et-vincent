@@ -15,15 +15,17 @@ const Image = () => (
         }
       }
     `}
-    render={data => <Img
-      fluid={data.placeholderImage.childImageSharp.fluid}
-      fadeIn={true}
-      critical={true}
-      backgroundColor="transparent"
-      alt="Louise et Vincent"
-      title="Louise et Vincent"
-    />}
+    render={data => (
+      <Img
+        fluid={data.placeholderImage.childImageSharp.fluid}
+        fadeIn={true}
+        critical={true}
+        backgroundColor="transparent"
+        alt="Louise et Vincent"
+        title="Louise et Vincent"
+      />
+    )}
   />
-);
+)
 
 export default Image

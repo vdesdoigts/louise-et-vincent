@@ -1,7 +1,7 @@
 import React from 'react'
-import styled from 'styled-components';
-import { Flex, Text } from 'rebass';
-import { breakpoints, colors } from '../styles/theme';
+import styled from 'styled-components'
+import { Flex, Text } from 'rebass'
+import { breakpoints, colors } from '../styles/theme'
 
 const Sticky = styled(Text)`
   width: 100%;
@@ -13,14 +13,14 @@ const Sticky = styled(Text)`
     z-index: 100;
     top: 0px;
   }
-`;
+`
 
 const Container = styled(Flex)`
   max-width: 96rem;
   padding-left: 0;
   margin: 0 auto;
   list-style: none;
-`;
+`
 
 const Link = styled(Text)`
   position: relative;
@@ -56,25 +56,56 @@ const Link = styled(Text)`
       background-color: ${colors.primary};
     }
 
-    ${props => props.current && `
+    ${props =>
+      props.current &&
+      `
       color: ${colors.text};
       &:after { background-color: ${colors.primary}; }`}
   }
-`;
+`
 
 const Nav = () => (
-  <Sticky width={1/1} px={['1rem', '1rem', '2rem']} pt={['1rem', '1rem', '3rem']} pb={['1rem', '1rem', '3rem']} fontSize={['1.6rem', '2rem']}>
-    <Container as="ul" flexDirection={['column', 'column', 'row']} justifyContent="space-around">
-      <Link as="li" py={['.5rem', '.5rem', 0]} textAlign="center"><Text as="a" href="#programme">Le programme</Text></Link>
-      <Link as="li" py={['.5rem', '.5rem', 0]} textAlign="center"><Text as="a" href="#photos">Les photos</Text></Link>
+  <Sticky
+    width={1 / 1}
+    px={['1rem', '1rem', '2rem']}
+    pt={['1rem', '1rem', '3rem']}
+    pb={['1rem', '1rem', '3rem']}
+    fontSize={['1.6rem', '2rem']}
+  >
+    <Container
+      as="ul"
+      flexDirection={['column', 'column', 'row']}
+      justifyContent="space-around"
+    >
+      <Link as="li" py={['.5rem', '.5rem', 0]} textAlign="center">
+        <Text as="a" href="#programme">
+          Le programme
+        </Text>
+      </Link>
+      <Link as="li" py={['.5rem', '.5rem', 0]} textAlign="center">
+        <Text as="a" href="#photos">
+          Les photos
+        </Text>
+      </Link>
       {/* <Link as="li" py={['.5rem', '.5rem', 0]} textAlign="center">Les meilleurs témoins</Link> */}
-      <Link as="li" py={['.5rem', '.5rem', 0]} textAlign="center"><Text as="a" href="http://www.millemercismariage.com/onsemariepourdevrai/liste.html" target="_blank">Liste de mariage</Text></Link>
-      <Link as="li" py={['.5rem', '.5rem', 0]} textAlign="center"><Text as="a" href="#infos">Infos pratiques</Text></Link>
+      <Link as="li" py={['.5rem', '.5rem', 0]} textAlign="center">
+        <Text
+          as="a"
+          href="http://www.millemercismariage.com/onsemariepourdevrai/liste.html"
+          target="_blank"
+        >
+          Liste de mariage
+        </Text>
+      </Link>
+      <Link as="li" py={['.5rem', '.5rem', 0]} textAlign="center">
+        <Text as="a" href="#infos">
+          Infos pratiques
+        </Text>
+      </Link>
     </Container>
   </Sticky>
 )
 
-Nav.propTypes = {
-}
+Nav.propTypes = {}
 
 export default Nav

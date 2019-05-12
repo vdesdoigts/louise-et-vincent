@@ -1,4 +1,4 @@
-import { css } from 'styled-components';
+import { css } from 'styled-components'
 
 export const svgStyle = css`
   display: inline-block;
@@ -8,7 +8,7 @@ export const svgStyle = css`
   fill: currentColor;
   stroke-width: 0;
   stroke: currentColor;
-`;
+`
 
 export const visuallyHidden = css`
   position: absolute;
@@ -18,4 +18,4 @@ export const visuallyHidden = css`
   border: 0;
   overflow: hidden;
   clip: rect(0, 0, 0, 0);
-`;
+`

@@ -26,14 +26,16 @@ const Image = () => (
         }
       }
     `}
-    render={data => <Img
-      fluid={data.placeholderImage.childImageSharp.fluid}
-      fadeIn={true}
-      critical={true}
-      backgroundColor="transparent"
-      alt="Louise et Vincent se marient"
-      title="Louise et Vincent se marient"
-    />}
+    render={data => (
+      <Img
+        fluid={data.placeholderImage.childImageSharp.fluid}
+        fadeIn={true}
+        critical={true}
+        backgroundColor="transparent"
+        alt="Louise et Vincent se marient"
+        title="Louise et Vincent se marient"
+      />
+    )}
   />
 )
 export default Image
