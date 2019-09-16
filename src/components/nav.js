@@ -83,7 +83,7 @@ const Nav = () => (
         </Text>
       </Link>
       <Link as="li" py={['.5rem', '.5rem', 0]} textAlign="center">
-        <Text as="a" href="#photos">
+        <Text as="a" href="https://photos.app.goo.gl/KQNjwNdaAcxsHXak9" target="_blank">
           Les photos
         </Text>
       </Link>
